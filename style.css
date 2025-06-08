@@ -1,0 +1,45 @@
+
+
+
+
+
+body {
+  background-color: #515151;
+  margin: 0;
+  padding: 2px;
+}
+
+
+h1{
+  color: blue;
+  font-size: 50px;
+  text-align: center;
+  padding: 2.5%;
+}
+
+
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    /* padding: 8px 0; */
+    border-top: 3px solid #ccc;
+        border-bottom: 3px solid #ccc;
+    font-size: 12px;
+        background-color: black;
+
+  }
+
+    footer p {
+    margin: 2px 0;
+   color: #ffffff;
+
+  }
+
+
+
+
+  

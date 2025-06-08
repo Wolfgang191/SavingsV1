@@ -1,0 +1,73 @@
+//Zach Schwab
+//6/5/25
+
+
+sUI = false;
+rs = false
+
+mobile = false;
+// let Rsizex;
+// let Rsizey;
+
+var button5, button4, button1, slider, sliderSize, size;
+
+
+
+function setup() {
+	createCanvas(windowWidth, windowHeight);
+	// background(100);
+	
+	size = min(width, height) * 0.25; // %
+	
+	let Ssize = min(width, height) * 0.2;
+	let Ssizey = min(width, height) * 0.1;
+	
+	
+	
+			let button1 = createButton('Settings'); 
+  button1.position(windowWidth*0.08, windowHeight*0.05);
+	button1.size(Ssize, Ssizey);
+	button1.style('background-color','rgb(224,169,224)');
+	button1.mousePressed(settingsUI);
+
+
+	
+	let button2 = createButton('mobile device'); 
+	  button2.position(windowWidth*0.08, windowHeight*0.15);
+	button2.size(Ssize, Ssizey);
+	button2.style('background-color','rgb(224,169,224)');
+	button2.mousePressed(mobileD);
+
+	
+		let button3 = createButton('Confirm'); 
+  button3.position(windowWidth*0.7, windowHeight*0.8);
+		button3.size(Ssize, Ssizey);
+	button3.style('background-color','rgb(224,169,224)');
+	button3.mousePressed(nah);
+	
+	
+	Ssize = min(width, height) * 0.2;
+	Ssizey = min(width, height) * 0.08;
+	
+				input1 = createInput();
+input1.position(width*0.7, height*0.7);
+input1.size(Ssize, Ssizey);
+	input1.style('background-color','rgb(249,218,249)');
+	input1.attribute('placeholder', 'Amount');
+	
+	
+//b4, b5
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+

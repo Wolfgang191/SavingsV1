@@ -1,0 +1,89 @@
+
+
+
+function settingsUI(){
+sUI = !sUI;
+	
+	
+	if(sUI === true)	{
+		
+								let Rsizex = min(width, height) * 0.8;
+		let Rsizey = min(width, height) * 0.6;
+
+		
+		
+					let sUIsize = min(width, height) * 0.3;
+		  slider = createSlider(1, 5, 2.5);
+		slider.position(width / 2, height / 2);
+		slider.size(sUIsize);
+		
+		
+	sliderSize = slider.value / 100;
+		//print(sliderSize);
+		
+			let Ssize = min(width, height) * 0.2;
+	let Ssizey = min(width, height) * 0.1;
+		
+		
+			button4 = createButton('Size+'); 
+	  button4.position(width / 2 - (Rsizex / 2), height / 2 - (Rsizey / 2));  //width*0.08, height*0.3
+	button4.size(Ssize, Ssizey);
+	button4.style('background-color','rgb(224,169,224)');
+	button4.mousePressed(plusSize);
+	
+			 button5 = createButton('Size-'); 
+	  button5.position(width / 2 - (Rsizex / 2), height / 2 - (Rsizey / 3));		//windowWidth*0.08, windowHeight*0.4
+	button5.size(Ssize, Ssizey);
+	button5.style('background-color','rgb(224,169,224)');
+	button5.mousePressed(minusSize);
+	
+					 button6 = createButton('Close'); 
+	  button6.position(width / 2 + ((Rsizex/2)-Ssize) , height / 2 +((Rsizey/2)-Ssizey));		//windowWidth*0.08, windowHeight*0.4
+	button6.size(Ssize, Ssizey);
+	button6.style('background-color','rgb(224,169,224)');
+	button6.mousePressed(settingsUI);
+	// }
+	}
+	
+		if(sUI === false)	{
+			
+			
+			
+			  button4.remove();
+			button5.remove();
+			button6.remove();
+		slider.remove();
+	}
+	
+	
+}
+
+//un-used
+function resize(){
+	rs = !rs;
+}
+
+
+function mobileD(){
+	mobile = !mobile;
+}
+
+
+function nah(){
+	
+}
+
+
+function plusSize(){
+	if(size<= min(width, height) * 0.3)	{
+	size = size + 50
+	}
+}
+
+
+function minusSize(){
+	if(size>= min(width, height) * 0.2)	{
+		size = size - 50
+	}
+}
+

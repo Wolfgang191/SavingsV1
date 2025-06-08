@@ -1,0 +1,87 @@
+
+
+
+function draw() {
+	background(51);
+	
+	if(mobile === false){
+	
+	//outline
+		fill('rgba(255,255,255,0.68)');
+	rect(width*0.5 -(width*0.65/2), height*0.5 -(height*0.35/2), width*0.65, height*0.35);
+}
+	
+	//draws balls
+			stroke('black');
+		strokeWeight(3);
+	
+// size = min(width, height) * 0.25; // %
+	
+
+	fill('red');
+	ellipse(width / 2, height / 2, size, size);
+	
+	
+// let offset = width * 0.3;
+	
+  let maxOffset = width / 2 - size / 1.5; // Leave some space between ellipses, 1.5
+  let offset = min(width * 0.25, maxOffset); // 25% of width, but capped for safety
+// %
+	
+	let	 maxOffsetY = 0 // Leave some space between ellipses
+let offsetY = 0 // 25% of width, but capped for safety
+	
+		
+			if(mobile === true){
+			maxOffset = 0; // Leave some space between ellipses
+ offset = 0; // 25% of width, but capped for safety
+	 maxOffsetY = height / 2 - size / 1.5; // Leave some space between ellipses
+offsetY = min(height * 0.25, maxOffsetY); // % of width, but capped for safety
+// %
+
+				
+		//	size = min(width, height) * 0.25; // %
+	}
+		
+		
+	fill('blue');
+	ellipse(width / 2 - offset, height / 2 - offsetY, size, size);
+	fill('green');
+	ellipse(width / 2 + offset, height / 2 + offsetY, size, size);
+	
+	
+
+	
+	//draws menu outline
+	if (sUI === true)	{
+		
+		
+		//sizes
+			let Rsizex = min(width, height) * 0.8;
+		let Rsizey = min(width, height) * 0.6;
+		
+		
+		
+		stroke('black');
+		strokeWeight(3);
+		fill('rgba(255,255,255,0.68)');
+		
+		
+	rect(width / 2 - (Rsizex / 2), height / 2 - (Rsizey / 2), Rsizex, Rsizey);
+		
+		
+	}
+	
+	//un-used
+	if (rs === true)	{
+		
+	}
+	
+
+
+}
+
+
+
+
+
